@@ -1,0 +1,59 @@
+package dictionary_txtUML.model;
+
+import hu.elte.txtuml.stdlib.util.DictionaryInterface;
+import hu.elte.txtuml.stdlib.util.DictionaryImplementation;
+import java.util.Enumeration;
+
+// This class for testing dictionary methods with txtUML.
+
+
+class Test {
+	
+	DictionaryInterface dictionary;
+	
+	
+	Test() {
+	dictionary = new DictionaryImplementation();
+	
+	
+	dictionary.put(1,"java");
+	dictionary.put(2,"txtUML");
+	dictionary.put(3,"Erlag");
+	dictionary.put(4,"C++");
+	
+	
+		System.out.println("content of dictinary " + dictionary);
+		
+		int A = dictionary.size();
+					System.out.println("size of dictionary is : " + A);
+		
+		
+		 System.out.println("Keys are :");
+		for (Enumeration<Integer> e = dictionary.keys(); e.hasMoreElements();)
+			{
+				System.out.println( e.nextElement() );
+			 }
+						   	   
+  			 System.out.println("Elements are :");
+  			 
+  		for (Enumeration<String> e = dictionary.elements(); e.hasMoreElements();) 
+			{
+					System.out.println( e.nextElement());
+			 }
+	
+	
+	boolean X = dictionary.isEmpty();
+	  				System.out.println("isEmpty = " + X );
+	  		
+	 System.out.println("Retrieved element from dictionary with key 1 = " + 
+    		dictionary.get(1) );
+   
+   System.out.println("Removing element from dictionary with key 2 : " + 
+    		dictionary.remove(2) );
+    		
+    	System.out.println("Items in the dictionary after removing..." + dictionary);
+    
+	
+	}
+	
+	}
